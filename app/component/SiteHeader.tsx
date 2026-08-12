@@ -3,6 +3,7 @@ import { Globe, Sparkles } from "lucide-react";
 
 const navLinks = [
   { href: "/harga", label: "Harga" },
+  { href: "/api-docs", label: "API & Docs" },
   { href: "/tentang-kami", label: "Tentang Kami" },
   { href: "/kontak", label: "Kontak" },
 ];

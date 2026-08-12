@@ -31,7 +31,7 @@ export default function SiteFooter() {
           <div>
             <h3 className="text-white font-semibold mb-4">Produk</h3>
             <ul className="space-y-3 text-sm">
-              <li><span className="text-slate-600">Translator API (segera)</span></li>
+              <li><Link href="/api-docs" className="hover:text-indigo-400 transition-colors">Translator API</Link></li>
               <li><span className="text-slate-600">Smart Replies (segera)</span></li>
               <li><span className="text-slate-600">Enterprise Server (segera)</span></li>
               <li><Link href="/harga" className="hover:text-indigo-400 transition-colors">Harga</Link></li>
@@ -46,15 +46,15 @@ export default function SiteFooter() {
               <li><Link href="/kontak" className="hover:text-indigo-400 transition-colors">Hubungi Kami</Link></li>
             </ul>
           </div>
-          <div>
+         <div>
             <h3 className="text-white font-semibold mb-4">Legal</h3>
             <ul className="space-y-3 text-sm">
-              <li><span className="text-slate-600">Kebijakan Privasi (segera)</span></li>
-              <li><span className="text-slate-600">Syarat & Ketentuan (segera)</span></li>
-              <li><span className="text-slate-600">Keamanan Data (segera)</span></li>
+              <li><Link href="/kebijakan-privasi" className="hover:text-indigo-400 transition-colors">Kebijakan Privasi</Link></li>
+              <li><Link href="/syarat-ketentuan" className="hover:text-indigo-400 transition-colors">Syarat & Ketentuan</Link></li>
+              <li><Link href="/keamanan-data" className="hover:text-indigo-400 transition-colors">Keamanan Data</Link></li>
             </ul>
           </div>
-        </div>
+                  </div>
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-600">
           <p>&copy; {new Date().getFullYear()} LinguistPro. Semua hak dilindungi.</p>
         </div>

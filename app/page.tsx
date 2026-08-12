@@ -258,9 +258,9 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-100 flex flex-col" onMouseUp={handleTextSelection}>
       
       {/* HEADER KOMERSIAL (SAAS NAVIGATION) */}
-      <nav className="bg-white border-b border-slate-200 px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-10 shadow-sm">
+      <nav className="bg-white/80 backdrop-blur-xl border-b border-slate-200 px-4 md:px-8 py-3.5 flex justify-between items-center sticky top-0 z-10 shadow-sm">
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="relative flex items-center justify-center w-10 h-10 bg-gradient-to-br from-indigo-600 to-violet-600 rounded-xl shadow-md shadow-indigo-200">
               <Globe className="w-5 h-5 text-white absolute" />
               <Sparkles className="w-3 h-3 text-indigo-200 absolute top-1 right-1" />
@@ -268,14 +268,13 @@ export default function Home() {
             <div className="hidden sm:block">
               <h1 className="text-xl font-extrabold text-slate-900 leading-none tracking-tight">Linguist<span className="text-indigo-600">Pro</span></h1>
             </div>
-          </div>
+          </Link>
           
-          {/* Menu Dummy SaaS */}
           <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-500">
-            <a href="#" className="hover:text-indigo-600 transition-colors">Produk</a>
-            <a href="#" className="hover:text-indigo-600 transition-colors">Solusi Bisnis</a>
+            <Link href="/produk" className="hover:text-indigo-600 transition-colors">Produk</Link>
+            <Link href="/solusi-bisnis" className="hover:text-indigo-600 transition-colors">Solusi Bisnis</Link>
             <Link href="/harga" className="hover:text-indigo-600 transition-colors">Harga</Link>
-            <a href="#" className="hover:text-indigo-600 transition-colors">API & Docs</a>
+            <Link href="/api-docs" className="hover:text-indigo-600 transition-colors">API & Docs</Link>
           </div>
         </div>
 
@@ -289,7 +288,6 @@ export default function Home() {
             <option value="id">ID</option><option value="en">EN</option><option value="zh">ZH</option><option value="es">ES</option><option value="ja">JA</option><option value="fr">FR</option>
           </select>
           <div className="h-5 w-px bg-slate-200 mx-2 hidden sm:block"></div>
-          {/* User Profile / Logout */}
           <button onClick={handleLogout} className="flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-red-600 hover:bg-red-50 p-2 rounded-xl transition-colors" title="Kunci Sesi">
             <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center border border-slate-300">
               <span className="text-slate-500">ME</span>
@@ -524,7 +522,7 @@ export default function Home() {
               </div>
               <p className="text-sm text-slate-500 mb-6">Membangun batas komunikasi tanpa hambatan untuk perusahaan global modern menggunakan kekuatan AI kontekstual.</p>
               <div className="flex gap-4">
-                <a href="#" className="hover:text-white transition-colors" title="Hubungi Kami"><Mail className="w-5 h-5"/></a>
+                <a href="mailto:richard.yuwana@optimasolusi.com" className="hover:text-white transition-colors" title="Email Kami"><Mail className="w-5 h-5"/></a>
                 <a href="#" className="hover:text-white transition-colors" title="Komunitas"><MessageCircle className="w-5 h-5"/></a>
                 <a href="#" className="hover:text-white transition-colors" title="Global Network"><Globe className="w-5 h-5"/></a>
               </div>
@@ -532,34 +530,31 @@ export default function Home() {
             <div>
               <h3 className="text-white font-semibold mb-4">Produk</h3>
               <ul className="space-y-3 text-sm">
-                <li><a href="#" className="hover:text-indigo-400 transition-colors">Translator API</a></li>
-                <li><a href="#" className="hover:text-indigo-400 transition-colors">Smart Replies</a></li>
-                <li><a href="#" className="hover:text-indigo-400 transition-colors">Enterprise Server</a></li>
+                <li><Link href="/api-docs" className="hover:text-indigo-400 transition-colors">Translator API</Link></li>
+                <li><Link href="/produk" className="hover:text-indigo-400 transition-colors">Smart Replies</Link></li>
+                <li><Link href="/produk" className="hover:text-indigo-400 transition-colors">Enterprise Server</Link></li>
                 <li><Link href="/harga" className="hover:text-indigo-400 transition-colors">Harga</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="text-white font-semibold mb-4">Perusahaan</h3>
               <ul className="space-y-3 text-sm">
-                <li><Link href="/tentang-kami" className="hover:text-indigo-400 transition-colors">Tentang Kami</Link></li>                <li><a href="#" className="hover:text-indigo-400 transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-indigo-400 transition-colors">Karir</a></li>
+                <li><Link href="/tentang-kami" className="hover:text-indigo-400 transition-colors">Tentang Kami</Link></li>
+                <li><Link href="/blog" className="hover:text-indigo-400 transition-colors">Blog</Link></li>
                 <li><Link href="/kontak" className="hover:text-indigo-400 transition-colors">Hubungi Kami</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="text-white font-semibold mb-4">Legal</h3>
               <ul className="space-y-3 text-sm">
-                <li><a href="#" className="hover:text-indigo-400 transition-colors">Kebijakan Privasi</a></li>
-                <li><a href="#" className="hover:text-indigo-400 transition-colors">Syarat & Ketentuan</a></li>
-                <li><a href="#" className="hover:text-indigo-400 transition-colors">Keamanan Data</a></li>
+                <li><Link href="/kebijakan-privasi" className="hover:text-indigo-400 transition-colors">Kebijakan Privasi</Link></li>
+                <li><Link href="/syarat-ketentuan" className="hover:text-indigo-400 transition-colors">Syarat & Ketentuan</Link></li>
+                <li><Link href="/keamanan-data" className="hover:text-indigo-400 transition-colors">Keamanan Data</Link></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-600">
             <p>&copy; {new Date().getFullYear()} LinguistPro Inc. All rights reserved.</p>
-            <div className="flex gap-4 mt-4 md:mt-0">
-              <span className="flex items-center gap-1"><Globe className="w-3 h-3"/> Global (English)</span>
-            </div>
           </div>
         </div>
       </footer>
